@@ -1,0 +1,11 @@
+# Plain static HTML site: no framework, no package manager, no build step.
+# Netlify publishes the repository root as-is.
+[build]
+  publish = "."
+
+# The site has no lowercase index.html; serve the compilation hub page at "/".
+[[redirects]]
+  from = "/"
+  to = "/Compilation.html"
+  status = 200
+  force = true
